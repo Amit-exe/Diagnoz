@@ -1,0 +1,137 @@
+{% extends 'main.html' %}
+{% block content %}
+{% if message %}
+<div class="alert alert-danger">{{ message }}</div>
+{% endif %}
+<div class="row">
+    <div class="col-md-6">
+        <!-- <div class="card card-body" style="border: 1px solid black;"> -->
+        <!-- <form class="form-horizontal" action="{{ url_for('predictPage') }}" method="POST">
+                <div class="form-group">
+                    <input style="border: 1px solid black;" class="form-control" type="text" name="pregnancies"
+                        placeholder="Number of Pregnancies eg. 0">
+                </div>
+                <div class="form-group">
+                    <input style="border: 1px solid black;" class="form-control" type="text" name="glucose"
+                        placeholder="Glucose (mg/dL) eg. 80">
+                </div>
+                <div class="form-group">
+                    <input style="border: 1px solid black;" class="form-control" type="text" name="bloodpressure"
+                        placeholder="Blood Pressure (mmHg) eg. 80">
+                </div>
+                <div class="form-group">
+                    <input style="border: 1px solid black;" class="form-control" type="text" name="skinthickness"
+                        placeholder="Skin Thickness (mm) eg. 20">
+                </div>
+                <div class="form-group">
+                    <input style="border: 1px solid black;" class="form-control" type="text" name="insulin"
+                        placeholder="Insulin Level (IU/mL) eg. 80">
+                </div>
+                <div class="form-group">
+                    <input style="border: 1px solid black;" class="form-control" type="text" name="bmi"
+                        placeholder="Body Mass Index (kg/m²) eg. 23.1">
+                </div>
+                <div class="form-group">
+                    <input style="border: 1px solid black;" class="form-control" type="text" name="dpf"
+                        placeholder="Diabetes Pedigree Function eg. 0.52">
+                </div>
+                <div class="form-group">
+                    <input style="border: 1px solid black;" class="form-control" type="text" name="age"
+                        placeholder="Age (years) eg. 34">
+                </div>
+
+                <input type="submit" class="btn btn-info btn-block" value="Predict">
+            </form> -->
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container  text-light bg-dark shadow rounded-3" style="margin-top:10% ;">
+            <div class="container my-3 p-2text-start">
+                <h1 class="display-6 lead">Diabetes Prediction</h1>
+            </div>
+            <div class="container my-2" style="display:inline-block">
+                <form class="form-horizontal" action="{{ url_for('predictPage') }}" method="POST">
+                    <div class="row">
+                        <!-- first col -->
+                        <div class="col-4">
+                            <div class="text-light ">
+                                <label for="" class="form-label">Number of Pregnacies</label>
+                                <input type="text" name="pregnancies" id="" class="form-control " style="width:70% ;">
+
+                            </div>
+
+                            <div class="text-light my-2 ">
+                                <label for="" class="form-label">Skin Thickness value</label>
+                                <input type="text" name="skinthickness" id="" class="form-control "
+                                    style="width:70% ; ">
+                            </div>
+
+                            <div class="text-light my-2 ">
+                                <label for="" class="form-label">Diabetes Pedigree Function value</label>
+                                <input type="text" name="dpf" id="" class="form-control " style="width:70% ;">
+                            </div>
+
+                            <input type="submit" value="Diabetes Test Results" class="btn  text-light border border-1">
+                        </div>
+
+                        <!-- second col -->
+                        <div class="col-4">
+                            <div class="text-light ">
+                                <label for="" class="form-label">Glucose Level</label>
+                                <input type="text" name="glucose" id="" class="form-control " style="width:70% ;">
+
+                            </div>
+
+                            <div class="text-light my-2 ">
+                                <label for="" class="form-label">Insulin Level</label>
+                                <input type="text" name="insulin" id="" class="form-control " style="width:70% ; ">
+                            </div>
+
+                            <div class="text-light my-2 ">
+                                <label for="" class="form-label">Age Of Person</label>
+                                <input type="text" name="age" id="" class="form-control " style="width:70% ;">
+                            </div>
+
+
+                        </div>
+
+                        <!-- third col -->
+                        <div class="col-4">
+                            <div class="text-light ">
+                                <label for="" class="form-label">Blood Pressure value</label>
+                                <input type="text" name="bloodpressure" id="" class="form-control " style="width:70% ;">
+
+                            </div>
+
+                            <div class="text-light my-2 ">
+                                <label for="" class="form-label">BMI value</label>
+                                <input type="text" name="bmi" id="" class="form-control " style="width:70% ; ">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <input type="submit" class="btn btn-info btn-block" value="Predict">
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- </div> -->
+    </div>
+    <div class="col-md-3"></div>
+</div>
+{% endblock %}

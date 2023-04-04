@@ -1,0 +1,115 @@
+{% extends 'main.html' %}
+{% block content %}
+{% if message %}
+
+
+<div class="alert alert-danger">{{ message }}</div>
+{% endif %}
+
+<div class="container bg-dark text-center text-light col-8 shadow mb-5" style="border-radius: 20px 0 20px 0;">
+    <div class="row py-5 px-5">
+        <div class="col-5 my-auto">
+            <h2 class="display-2 text-start">Empowering Health through AI - Get Diagnosed with Diagnoz</h2>
+
+        </div>
+        <div class="col-6 my-auto " style="margin-left: 50px;">
+
+            <div class="row">
+                <img class="mx-auto" src="static\images\mdp.png" style="height: 70%; width: 70%; border-radius: 30px;"
+                    alt="">
+            </div>
+            <div class="row px-5 py-4">
+                <p class="lead fs-6" align="justify">Diagnoz is an innovative app that harnesses the
+                    power
+                    of machine learning to
+                    predict
+                    multiple diseases. With its advanced algorithms and predictive models, Diagnoz enables users to take
+                    control of their health by providing accurate and reliable diagnoses. Whether you're experiencing
+                    symptoms or simply want to stay on top of your health, Diagnoz empowers you to make informed
+                    decisions and take proactive steps towards a healthier future. Trust in the power of AI to diagnose
+                    and manage your health with Diagnoz.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container text-center" style="margin-bottom: 150px;">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 my-5">
+            <div class="card mx-auto" style="width: 20rem;">
+                <img src="static\images\dt.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Diabetes</h5>
+                    <p class="card-text">Diabetes is a disease that occurs when your blood glucose, also called blood
+                        sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat.
+                        Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used
+                        for energy.</p>
+                    <a href="#" class="btn btn-primary">Predict</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 my-5">
+            <div class="card mx-auto" style="width: 20rem;">
+                <img src="static\images\ht.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Heart Disease</h5>
+                    <p class="card-text">Heart disease is a group of conditions that affect the heart and blood vessels,
+                        and is a leading cause of death worldwide. Risk factors include smoking, high blood pressure,
+                        high cholesterol, diabetes, obesity, and family history. Treatment options include medications,
+                        lifestyle changes, and surgery.</p>
+                    <a href="#" class="btn btn-primary">Predict</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 my-5">
+            <div class="card mx-auto" style="width: 20rem;">
+                <img src="static\images\lv.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Liver disease</h5>
+                    <p class="card-text">Liver disease symptoms vary, but may include abdominal and leg swelling, easy
+                        bruising, stool and urine color changes, and jaundice (yellowing of skin and eyes). Some cases
+                        have no symptoms. Tests, such as imaging and liver function tests, can help diagnose liver
+                        diseases.</p>
+                    <a href="#" class="btn btn-primary">Predict</a>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 my-5">
+            <div class="card mx-auto" style="width: 20rem;">
+                <img src="static\images\ml.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Malaria</h5>
+                    <p class="card-text">Malaria is a mosquito-borne infectious disease that affects humans and other
+                        animals. Symptoms typically include fever, tiredness, vomiting, and headaches, and in severe
+                        cases, it can lead to yellow skin, seizures, coma, or death. It is transmitted through the bites
+                        of infected female Anopheles mosquitoes</p>
+                    <a href="#" class="btn btn-primary">Predict</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 my-5">
+            <div class="card mx-auto" style="width: 20rem;">
+                <img src="static\images\pn.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Pneumonia</h5>
+                    <p class="card-text">Pneumonia is a lung infection caused by bacteria, viruses, or fungi. Symptoms
+                        include coughing, chest pain, fever, and difficulty breathing. Treatment involves antibiotics,
+                        rest, and plenty of fluids. Severe cases may require hospitalization.Pneumonia can be caused by
+                        a variety of microorganisms, including bacteria, viruses, and fungi.</p>
+                    <a href="#" class="btn btn-primary">Predict</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

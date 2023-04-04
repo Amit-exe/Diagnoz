@@ -1,0 +1,259 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+header {
+  height: 50px;
+}
+
+footer {
+  height: 75px;
+  background: black;
+}
+
+/* Trick */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  padding: 10px;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+.card-img-top {
+    height: 250px; /* set the height you want */
+    width: 100%; /* set the width to 100% to make it responsive */
+    object-fit: cover; /* to make sure the entire image is visible */
+  }
+
+
+
+
+nav {
+    margin: 20px auto 0;
+    margin-top: 100px;
+    position: relative;
+    width: 610px;
+    height: 50px;
+    background-color: #34495e;
+    border-radius: 8px;
+    font-size: 0;
+  }
+  nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+  }
+  nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .6s ease 0s;
+    border-radius: 8px;
+  }
+  a:nth-child(1) {
+    width: 100px;
+  }
+  a:nth-child(2) {
+    width: 100px;
+  }
+  a:nth-child(3) {
+    width: 100px;
+  }
+  a:nth-child(4) {
+    width: 100px;
+  }
+  a:nth-child(5) {
+    width: 100px;
+  }
+  a:nth-child(6) {
+    width: 110px;
+  }
+
+  nav .start-home, a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+    background-color: #1abc9c;
+  }
+  nav .start-about, a:nth-child(2):hover~.animation {
+    width: 100px;
+    left: 100px;
+    background-color: #e74c3c;
+  }
+  nav .start-blog, a:nth-child(3):hover~.animation {
+    width: 100px;
+    left: 200px;
+    background-color: #3498db;
+  }
+  nav .start-portefolio, a:nth-child(4):hover~.animation {
+    width: 100px;
+    left: 300px;
+    background-color: #9b59b6;
+  }
+  nav .start-contact, a:nth-child(5):hover~.animation {
+    width: 100px;
+    left: 400px;
+    background-color: #e67e22;
+  }
+
+  nav .start-contact, a:nth-child(6):hover~.animation {
+    width: 110px;
+    left: 500px;
+    background-color: #29e622;
+  }
+  
+  body {
+    font-size: 12px;
+    font-family: sans-serif;
+    background: #2c3e50;
+  }
+  
+  span {
+      color: #2BD6B4;
+  }
+
+
+
+
+
+
+
+
+
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 150px;
+  padding: 30px 50px  20px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}

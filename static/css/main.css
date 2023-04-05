@@ -118,13 +118,20 @@ nav {
   nav .start-contact, a:nth-child(6):hover~.animation {
     width: 110px;
     left: 500px;
-    background-color: #29e622;
+    background-color: #122911;
   }
   
   body {
     font-size: 12px;
     font-family: sans-serif;
-    background: #2c3e50;
+    /* background: #080045; */
+    /* background-image: linear-gradient(to top left, #00FFAB 0%, #A760FF 100%);
+     */
+
+     background: rgb(28,115,158);
+     background: linear-gradient(45deg, #141e30  50%, #243b55 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   
   span {

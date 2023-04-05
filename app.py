@@ -9,10 +9,60 @@ from tensorflow.keras.models import load_model
 app = Flask(__name__)
 
 def predict(values, dic):
+    print("inside")
     if len(values) == 8:
-        model = pickle.load(open('models/diabetes.pkl','rb'))
-        values = np.asarray(values)
+
+        dic2 = {'NewBMI_Obesity 1': 0, 'NewBMI_Obesity 2': 0, 'NewBMI_Obesity 3': 0, 'NewBMI_Overweight': 0,
+                'NewBMI_Underweight': 0, 'NewInsulinScore_Normal': 0, 'NewGlucose_Low': 0,
+                'NewGlucose_Normal': 0, 'NewGlucose_Overweight': 0, 'NewGlucose_Secret': 0}
+
+        try:
+            if dic['BMI'] <= 18.5:
+                dic2['NewBMI_Underweight'] = 1
+            
+            elif 18.5 < dic['BMI'] <= 24.9:
+                pass
+            elif 24.9 < dic['BMI'] <= 29.9:
+                dic2['NewBMI_Overweight'] = 1
+            elif 29.9 < dic['BMI'] <= 34.9:
+                dic2['NewBMI_Obesity 1'] = 1
+            elif 34.9 < dic['BMI'] <= 39.9:
+                dic2['NewBMI_Obesity 2'] = 1
+            elif dic['BMI'] > 39.9:
+                dic2['NewBMI_Obesity 3'] = 1
+        except Exception as e:
+            print(e)
+            
+
+        if 16 <= dic['Insulin'] <= 166:
+            dic2['NewInsulinScore_Normal'] = 1
+
+        if dic['Glucose'] <= 70:
+            dic2['NewGlucose_Low'] = 1
+        elif 70 < dic['Glucose'] <= 99:
+            dic2['NewGlucose_Normal'] = 1
+        elif 99 < dic['Glucose'] <= 126:
+            dic2['NewGlucose_Overweight'] = 1
+        elif dic['Glucose'] > 126:
+            dic2['NewGlucose_Secret'] = 1
+        
+
+
+
+        print("inside line 46")
+        dic.update(dic2)
+        print("`````````````````````````````````````")
+        print(dic)
+        values2 = list(map(float, list(dic.values())))
+        print(values2)
+        try:
+            model = pickle.load(open('models/diabetes.pkl','rb'))
+            values = np.asarray(values2)
+        except Exception as e:
+            print(e)
+        print(values)
         return model.predict(values.reshape(1, -1))[0]
+    
     elif len(values) == 26:
         model = pickle.load(open('models/breast_cancer.pkl','rb'))
         values = np.asarray(values)
@@ -67,8 +117,19 @@ def predictPage():
     try:
         if request.method == 'POST':
             to_predict_dict = request.form.to_dict()
+            print(to_predict_dict)
+        
+            for key, value in to_predict_dict.items():
+                try:
+                    to_predict_dict[key] = int(value)
+                except ValueError:
+                    to_predict_dict[key] = float(value)
+
             to_predict_list = list(map(float, list(to_predict_dict.values())))
+            print(to_predict_list)
             pred = predict(to_predict_list, to_predict_dict)
+            print('hello')
+            print(pred)
     except:
         message = "Please enter valid Data"
         return render_template("home.html", message = message)

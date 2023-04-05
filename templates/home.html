@@ -6,7 +6,8 @@
 <div class="alert alert-danger">{{ message }}</div>
 {% endif %}
 
-<div class="container bg-dark text-center text-light col-8 shadow mb-5" style="border-radius: 20px 0 20px 0;">
+<div class="container text-center text-light col-8 shadow mb-5"
+    style="border-radius: 20px 0 20px 0; background-color:#111111;">
     <div class="row py-5 px-5">
         <div class="col-5 my-auto">
             <h2 class="display-2 text-start">Empowering Health through AI - Get Diagnosed with Diagnoz</h2>
@@ -47,7 +48,7 @@
                         sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat.
                         Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used
                         for energy.</p>
-                    <a href="#" class="btn btn-primary">Predict</a>
+                    <a href="{{ url_for('diabetesPage') }}" class="btn btn-primary">Predict</a>
                 </div>
             </div>
 
@@ -61,7 +62,7 @@
                         and is a leading cause of death worldwide. Risk factors include smoking, high blood pressure,
                         high cholesterol, diabetes, obesity, and family history. Treatment options include medications,
                         lifestyle changes, and surgery.</p>
-                    <a href="#" class="btn btn-primary">Predict</a>
+                    <a href="{{ url_for('heartPage') }}" class="btn btn-primary">Predict</a>
                 </div>
             </div>
 
@@ -75,7 +76,7 @@
                         bruising, stool and urine color changes, and jaundice (yellowing of skin and eyes). Some cases
                         have no symptoms. Tests, such as imaging and liver function tests, can help diagnose liver
                         diseases.</p>
-                    <a href="#" class="btn btn-primary">Predict</a>
+                    <a href="{{ url_for('liverPage') }}" class="btn btn-primary">Predict</a>
 
                 </div>
             </div>
@@ -90,7 +91,7 @@
                         animals. Symptoms typically include fever, tiredness, vomiting, and headaches, and in severe
                         cases, it can lead to yellow skin, seizures, coma, or death. It is transmitted through the bites
                         of infected female Anopheles mosquitoes</p>
-                    <a href="#" class="btn btn-primary">Predict</a>
+                    <a href="{{ url_for('malariaPage') }}" class="btn btn-primary">Predict</a>
                 </div>
             </div>
 
@@ -104,7 +105,7 @@
                         include coughing, chest pain, fever, and difficulty breathing. Treatment involves antibiotics,
                         rest, and plenty of fluids. Severe cases may require hospitalization.Pneumonia can be caused by
                         a variety of microorganisms, including bacteria, viruses, and fungi.</p>
-                    <a href="#" class="btn btn-primary">Predict</a>
+                    <a href="{{ url_for('pneumoniaPage') }}" class="btn btn-primary">Predict</a>
                 </div>
             </div>
 

@@ -1,7 +1,7 @@
 {% extends 'main.html' %}
 {% block content %}
 
-<div class="row"  style="margin-bottom: 175px;">
+<!-- <div class="row"  style="margin-bottom: 175px;">
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <center><h1>Liver Disease Predictor</h1></center>
@@ -71,7 +71,91 @@
             </form>
         </div>
     </div>
-    <div class="col-md-2"></div>
+    <div class="col-md-2"></div> -->
+<!-- </div> -->
+
+<div class="container  text-light bg-dark shadow rounded-3" style="width:60%">
+    <div class="container my-3 p-2 text-start">
+        <h1 class="display-6 lead text-center">Liver Prediction</h1>
+    </div>
+    <div class="container my-2" style="display:inline-block">
+        <form action="">
+            <div class="row">
+                <!-- first col -->
+                <div class="col-4 ">
+                    <div class="text-light my-2 ">
+                        <label for="" class="form-label">Age</label>
+                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+
+                    </div>
+
+                    <div class="text-light my-2">
+                        <label for="" class="form-label">Direct Bilirubin</label>
+                        <input type="text" name="" id="" class="form-control " style="width:70% ; ">
+                    </div>
+
+                    <div class="text-light my-2 ">
+                        <label for="" class="form-label">Alamine Aminotransferase</label>
+                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+                    </div>
+                    <div class="text-light my-2 ">
+                        <label for="" class="form-label">Gender(Male:1,Female:0)</label>
+                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+
+                    </div>
+
+                </div>
+
+                <!-- second col -->
+                <div class="col-4">
+
+                    <div class="text-light my-2 ">
+                        <label for="" class="form-label">Total Protiens</label>
+                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+                    </div>
+
+                    <div class="text-light my-2 ">
+                        <label for="" class="form-label">Albumin and Globulin Ratio</label>
+                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+                    </div>
+
+                    <div class="text-light ">
+                        <label for="" class="form-label">Total Bilirubin</label>
+                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+
+                    </div>
+                    <div class="text-light my-2 ">
+                        <input type="submit" value="Predict" class="btn btn-info my-4">
+
+                    </div>
+
+
+
+
+                </div>
+                <div class="col-4">
+                    <div class="text-light my-2 ">
+                        <label for="" class="form-label">Alkaline Phosphotase</label>
+                        <input type="text" name="" id="" class="form-control " style="width:70% ; ">
+                    </div>
+
+                    <div class="text-light my-2 ">
+                        <label for="" class="form-label">Aspartate Aminotransferase</label>
+                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+                    </div>
+
+                    <div class="text-light my-2 ">
+                        <label for="" class="form-label">Albumin</label>
+                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </form>
+    </div>
 </div>
 
 {% endblock %}

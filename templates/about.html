@@ -1,0 +1,58 @@
+{% extends 'main.html' %}
+{% block content %}
+{% if message %}
+<div class="alert alert-danger">{{ message }}</div>
+{% endif %}
+
+
+<div class="container p-3 text-light shadow rounded-3 col-7" style="background-color: rgb(255, 255, 255);">
+
+    <div style="color: #8b4327;">
+        <center>
+
+            <h1 class="display-6">About me</h1>
+
+        </center>
+    </div>
+
+    <div class="row">
+        <div class="col my-3" style="border-right: solid #444 2px;">
+            <div class="my-2"> <img style="width: 100%; border-radius: 50%;"
+                    src="https://avatars.githubusercontent.com/u/110753483?v=4" alt="">
+                <div>
+                    <center>
+                        <h2 class="mb-4" style="color: #8b4327;">Amit Kushwaha</h2>
+                        <a class="btn" href="mailto:amit.kushwaha.exe@gmail.com">CONTACT ME</a>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="col-10">
+            <p class="p-3" style="font-size: 1.1rem; color:#444">
+                I am the developer of Diagnoz. I am a passionate
+                software engineer with experience in developing predictive models for healthcare applications. My goal
+                is to
+                create innovative solutions that can help improve patient outcomes and assist healthcare professionals
+                in
+                making informed decisions. <br><br>
+                I developed Diagnoz as a tool to help people predict their risk for various diseases based on a set of
+                input
+                features. The tool is powered by advanced machine learning algorithms that have been trained on large
+                datasets to provide accurate predictions. <br><br>
+
+                I hold a post graduate degree in M.Sc Information Technology and have worked on several data-driven
+                projects in the
+                past. I
+                am
+                constantly learning and expanding my skillset to keep up with the latest trends and advancements in the
+                field of data science. <br><br>
+
+                Thank you for using Diagnoz, and please feel free to reach out to me with any questions or feedback.
+            </p>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

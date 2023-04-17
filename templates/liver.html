@@ -1,106 +1,35 @@
 {% extends 'main.html' %}
 {% block content %}
 
-<!-- <div class="row"  style="margin-bottom: 175px;">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-        <center><h1>Liver Disease Predictor</h1></center>
-        <div class="card card-body" style="border: 1px solid black;">
-            <form class="form-horizontal" action="{{ url_for('predictPage') }}" method="POST">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input style="border: 1px solid black;" class="form-control" type="text" name="Age" placeholder="Age">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input style="border: 1px solid black;" class="form-control" type="text" name="Total_Bilirubin" placeholder="Total Bilirubin">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input style="border: 1px solid black;" class="form-control" type="text" name="Direct_Bilirubin" placeholder="Direct Bilirubin">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input style="border: 1px solid black;" class="form-control" type="text" name="Alkaline_Phosphotase" placeholder="Alkaline Phosphotase">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input style="border: 1px solid black;" class="form-control" type="text" name="Alamine_Aminotransferase" placeholder="Alamine Aminotransferase">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input style="border: 1px solid black;" class="form-control" type="text" name="Aspartate_Aminotransferase" placeholder="Aspartate Aminotransferase">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input style="border: 1px solid black;" class="form-control" type="text" name="Total_Protiens" placeholder="Total Protiens">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input style="border: 1px solid black;" class="form-control" type="text" name="Albumin" placeholder="Albumin">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input style="border: 1px solid black;" class="form-control" type="text" name="Albumin_and_Globulin_Ratio" placeholder="Albumin and Globulin Ratio">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input style="border: 1px solid black;" class="form-control" type="text" name="Gender_Male" placeholder="Gender(Male: 1, Female: 0)">
-                        </div>
-                    </div>
-                </div>
-                <input type="submit" class="btn btn-info btn-block" value="Predict">
-            </form>
-        </div>
-    </div>
-    <div class="col-md-2"></div> -->
-<!-- </div> -->
 
 <div class="container  text-light bg-dark shadow rounded-3" style="width:60%">
-    <div class="container my-3 p-2 text-start">
-        <h1 class="display-6 lead text-center">Liver Prediction</h1>
+    <div class="container text-start">
+        <h1 class="display-6 lead">Liver Disease Prediction</h1>
     </div>
     <div class="container my-2" style="display:inline-block">
-        <form action="">
+        <form class="form-horizontal" action="{{ url_for('predictPage') }}" method="POST">
             <div class="row">
                 <!-- first col -->
                 <div class="col-4 ">
                     <div class="text-light my-2 ">
                         <label for="" class="form-label">Age</label>
-                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+                        <input type="text" name="Age" id="" class="form-control " style="width:70% ;">
 
                     </div>
 
                     <div class="text-light my-2">
                         <label for="" class="form-label">Direct Bilirubin</label>
-                        <input type="text" name="" id="" class="form-control " style="width:70% ; ">
+                        <input type="text" name="Direct_Bilirubin" id="" class="form-control " style="width:70% ; ">
                     </div>
 
                     <div class="text-light my-2 ">
                         <label for="" class="form-label">Alamine Aminotransferase</label>
-                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+                        <input type="text" name="Alamine_Aminotransferase" id="" class="form-control "
+                            style="width:70% ;">
                     </div>
                     <div class="text-light my-2 ">
                         <label for="" class="form-label">Gender(Male:1,Female:0)</label>
-                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+                        <input type="text" name="Gender_Male" id="" class="form-control " style="width:70% ;">
 
                     </div>
 
@@ -111,17 +40,18 @@
 
                     <div class="text-light my-2 ">
                         <label for="" class="form-label">Total Protiens</label>
-                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+                        <input type="text" name="Total_Protiens" id="" class="form-control " style="width:70% ;">
                     </div>
 
                     <div class="text-light my-2 ">
                         <label for="" class="form-label">Albumin and Globulin Ratio</label>
-                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+                        <input type="text" name="Albumin_and_Globulin_Ratio" id="" class="form-control "
+                            style="width:70% ;">
                     </div>
 
                     <div class="text-light ">
                         <label for="" class="form-label">Total Bilirubin</label>
-                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+                        <input type="text" name="Total_Bilirubin" id="" class="form-control " style="width:70% ;">
 
                     </div>
                     <div class="text-light my-2 ">
@@ -136,17 +66,18 @@
                 <div class="col-4">
                     <div class="text-light my-2 ">
                         <label for="" class="form-label">Alkaline Phosphotase</label>
-                        <input type="text" name="" id="" class="form-control " style="width:70% ; ">
+                        <input type="text" name="Alkaline_Phosphotase" id="" class="form-control " style="width:70% ; ">
                     </div>
 
                     <div class="text-light my-2 ">
                         <label for="" class="form-label">Aspartate Aminotransferase</label>
-                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+                        <input type="text" name="Aspartate_Aminotransferase" id="" class="form-control "
+                            style="width:70% ;">
                     </div>
 
                     <div class="text-light my-2 ">
                         <label for="" class="form-label">Albumin</label>
-                        <input type="text" name="" id="" class="form-control " style="width:70% ;">
+                        <input type="text" name="Albumin" id="" class="form-control " style="width:70% ;">
                     </div>
 
                 </div>

@@ -25,11 +25,6 @@ footer {
   margin-bottom: 0;
 }
 
-
-
-
-
-
 .card-img-top {
     height: 250px; /* set the height you want */
     width: 100%; /* set the width to 100% to make it responsive */
@@ -37,7 +32,12 @@ footer {
   }
 
 
-
+  .card.mx-auto{
+  transition: all .2s ease-in-out;
+  }
+.card.mx-auto:hover{
+  transform: scale(1.1);
+}
 
 nav {
     margin: 20px auto 0;
@@ -146,13 +146,6 @@ nav {
   span {
       color: #2BD6B4;
   }
-
-
-
-
-
-
-
 
 
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");

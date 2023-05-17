@@ -108,7 +108,6 @@ def predictPage():
             to_predict_list = list(map(float, list(to_predict_dict.values())))
             print(to_predict_list)
             pred = predict(to_predict_list, to_predict_dict)
-            print('hello')
             print(pred)
     except:
         message = "Please enter valid Data"
